@@ -1,0 +1,24 @@
+/* Лав Парфюм v12 - approved LP, photographic contacts, reliable smooth scrolling */
+html,body{scroll-behavior:auto!important;scroll-snap-type:none!important;}
+/* Exact approved LP monogram from the provided standalone PNG */
+.identity-monogram.identity-monogram--v11{
+ display:block!important;width:49px!important;height:56px!important;flex:0 0 49px!important;
+ max-width:none!important;object-fit:contain!important;object-position:center!important;
+ border:0!important;background:transparent!important;
+}
+/* Original AZIRI perfume campaign photograph in the right-hand contact panel. */
+.contacts-layout .contacts-artwork{
+ background-color:#c7a38b!important;
+ background-image:url('backgrounds/contacts-aziri-portrait.webp')!important;
+ background-position:center center!important;
+ background-size:cover!important;
+ background-repeat:no-repeat!important;
+ min-height:580px;
+}
+/* Do not force hidden scroll containers/snap while browsing catalogue. */
+.catalog-page,.catalog-grid,.catalog-page .product-grid{scroll-snap-type:none!important;overscroll-behavior:auto!important;}
+@media(max-width:620px){
+ .identity-monogram.identity-monogram--v11{width:40px!important;height:46px!important;flex-basis:40px!important;}
+ .contacts-layout .contacts-artwork{min-height:clamp(340px,110vw,480px)!important;background-position:50% 41%!important;}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important;}}
