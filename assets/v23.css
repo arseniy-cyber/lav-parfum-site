@@ -1,0 +1,42 @@
+/* V23: original supplied portrait, nearly-square editorial crop. */
+@media(min-width:761px){
+ .about-page-layout.flip .page-split-image{
+  box-sizing:border-box!important;
+  height:auto!important;
+  min-height:clamp(580px,51vw,720px)!important;
+  padding:clamp(20px,3vw,42px)!important;
+  background:#f4e9dd!important;
+ }
+ .about-page-layout.flip .page-split-image>img{
+  display:block!important;
+  position:relative!important;
+  inset:auto!important;
+  width:min(100%,560px)!important;
+  height:auto!important;
+  max-height:none!important;
+  aspect-ratio:11/12.4!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  image-rendering:auto!important;
+ }
+}
+@media(max-width:760px){
+ .about-page-layout.flip .page-split-image{
+  box-sizing:border-box!important;
+  min-height:0!important;
+  height:auto!important;
+  padding:clamp(16px,5vw,24px)!important;
+ }
+ .about-page-layout.flip .page-split-image>img{
+  display:block!important;
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:auto!important;
+  max-height:none!important;
+  aspect-ratio:11/12.4!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  image-rendering:auto!important;
+ }
+}

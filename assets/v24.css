@@ -1,0 +1,27 @@
+/* Lav Parfum V24: square, high-resolution original portrait. */
+@media(min-width:761px){
+ .about-page-layout.flip .page-split-image{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  box-sizing:border-box!important;height:auto!important;min-height:clamp(560px,48vw,710px)!important;
+  padding:clamp(22px,3vw,42px)!important;background:#f4e9dd!important;
+ }
+ .about-page-layout.flip .page-split-image>img{
+  display:block!important;position:relative!important;inset:auto!important;
+  width:min(100%,580px)!important;height:auto!important;max-width:100%!important;
+  max-height:none!important;aspect-ratio:1/1!important;object-fit:cover!important;
+  object-position:center!important;filter:none!important;transform:none!important;
+ }
+}
+@media(max-width:760px){
+ .about-page-layout.flip .page-split-image{
+  display:flex!important;justify-content:center!important;align-items:center!important;
+  box-sizing:border-box!important;min-height:0!important;height:auto!important;
+  padding:clamp(16px,5vw,24px)!important;background:#f4e9dd!important;
+ }
+ .about-page-layout.flip .page-split-image>img{
+  display:block!important;position:relative!important;inset:auto!important;
+  width:100%!important;height:auto!important;max-width:100%!important;max-height:none!important;
+  aspect-ratio:1/1!important;object-fit:cover!important;object-position:center!important;
+  filter:none!important;transform:none!important;
+ }
+}
