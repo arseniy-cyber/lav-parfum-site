@@ -1,0 +1,57 @@
+/* Lav Parfum V22 - a precisely framed original portrait and comfortable text spacing. */
+@media (min-width: 761px) {
+ .about-page-layout.flip .page-split-text {
+   padding: clamp(45px, 5.2vw, 82px) clamp(46px, 5.1vw, 90px) !important;
+ }
+ .about-page-layout.flip .page-split-image {
+   display:flex !important;
+   align-items:center !important;
+   justify-content:center !important;
+   padding: clamp(18px, 2.5vw, 36px) !important;
+   background:#f4e9dd !important;
+   overflow:hidden !important;
+ }
+ .about-page-layout.flip .page-split-image > img {
+   display:block !important;
+   position:relative !important;
+   inset:auto !important;
+   width:auto !important;
+   height:100% !important;
+   max-width:100% !important;
+   max-height:620px !important;
+   object-fit:contain !important;
+   object-position:center !important;
+   filter:none !important;
+   transform:none !important;
+   image-rendering:auto !important;
+ }
+}
+@media (max-width: 760px) {
+ .about-page-layout.flip .page-split-text {
+   padding:clamp(35px,8vw,55px) clamp(23px,6vw,42px) !important;
+ }
+ .about-page-layout.flip .page-split-image {
+   display:flex !important;
+   align-items:center !important;
+   justify-content:center !important;
+   min-height:400px !important;
+   height:clamp(400px,110vw,550px) !important;
+   padding:18px !important;
+   background:#f4e9dd !important;
+   overflow:hidden !important;
+ }
+ .about-page-layout.flip .page-split-image > img {
+   display:block !important;
+   position:relative !important;
+   inset:auto !important;
+   width:auto !important;
+   max-width:100% !important;
+   height:100% !important;
+   max-height:100% !important;
+   object-fit:contain !important;
+   object-position:center !important;
+   filter:none !important;
+   transform:none !important;
+   image-rendering:auto !important;
+ }
+}

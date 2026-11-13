@@ -1,0 +1,4 @@
+/* V27: remove only the burgundy fade overlay across Lyubov portrait on narrow screens. */
+@media (max-width: 760px) {
+  #app .v7-hero::after { display: none !important; background: none !important; }
+}
