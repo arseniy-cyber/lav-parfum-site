@@ -56,12 +56,13 @@
         price10:price(fd,'price10'),priceFull:price(fd,'priceFull'),
         notes:{top:text(fd,'top'),middle:text(fd,'middle'),base:text(fd,'base'),other:text(fd,'other')},
         available:fd.has('available'),hit:fd.has('hit'),new:fd.has('new'),
-        placeholder:false,image:text(fd,'image')||null
+        placeholder:false,image:fd.has('removePhoto')?null:(text(fd,'image')||null)
       };
       if(!API)throw Error('Адрес Worker не задан в настройках сайта.');
       const token=sessionStorage.getItem('lav_admin_token');
       if(!token)throw Error('Нет токена входа. Нажми «Выйти» и войди в админку заново.');
       const photo=$('#product-photo-file',form)?.files?.[0];
+      if(photo&&fd.has('removePhoto'))throw Error('Выбери одно: загрузить фотографию или убрать её.');
       if(photo){
         if(!['image/jpeg','image/png','image/webp','image/avif'].includes(photo.type))throw Error('Выбери JPG, PNG, WebP или AVIF.');
         if(photo.size>8*1024*1024||photo.size<16)throw Error('Файл фотографии должен быть от 16 байт до 8 МБ.');
@@ -129,5 +130,7 @@
     event.preventDefault();event.stopImmediatePropagation();
     doSave(event.target);
   },true);
-  console.info('[Lav Parfum] Защищённое сохранение товаров и фотографий V34 активно.');
+  const cleanupToken=sessionStorage.getItem('lav_admin_token');
+  if(cleanupToken&&API)fetch(API+'/api/admin/cleanup',{method:'POST',headers:{Authorization:'Bearer '+cleanupToken}}).catch(()=>{});
+  console.info('[Lav Parfum] Защищённое сохранение товаров и фотографий V35 активно.');
 })();
