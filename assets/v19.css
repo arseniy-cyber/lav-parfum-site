@@ -1,0 +1,96 @@
+/* Lav Parfum V19 - faithful photography, readable editorial typography, lightweight scroll */
+:root{--burgundy:#741d3b;--v16-ink:#741d3b;--cream:#fbf4ea;--soft:#fffaf4}
+/* CSS must not impose a second animation on window.scrollTo in the wheel handler. */
+html,body{scroll-behavior:auto!important;scroll-snap-type:none!important}
+body{overflow-x:clip}
+#app,section,.page-top,.v7-feature,.v7-accent,.v16-editorial,.v19-journal{min-width:0;max-width:100%}
+/* Clean white packshots. No filters, blurring, colored overlays or scaling transforms on the photos. */
+.product-visual,.home-scent-picture,.detail-gallery{background-color:#fff!important}
+.product-visual::before,.product-visual::after{display:none!important}
+.real-product-img,.home-real-photo,.detail-gallery .real-product-img{object-fit:contain!important;filter:none!important;transform:none!important;mix-blend-mode:normal!important;image-rendering:auto!important}
+/* Extra breathing room is carried by the canvas image itself; no image-clipping. */
+.product-visual,.detail-gallery,.home-scent-picture{overflow:hidden}
+/* The V13 burgundy curtain photograph stays on the About page, text is high-contrast. */
+.page-top.page-top--about{background-image:linear-gradient(90deg,rgba(39,10,21,.84) 0%,rgba(39,10,21,.67) 49%,rgba(39,10,21,.17) 100%),url('backgrounds/flowers-silk.webp')!important;background-position:center 46%!important}
+.page-top.page-top--about .eyebrow{color:#eed3d6!important}
+.page-top.page-top--about h1{color:#fff5e8!important;text-shadow:0 2px 24px rgba(25,5,14,.18)!important}
+.page-top.page-top--about p{color:#fae9df!important;font-weight:500!important;line-height:1.8!important}
+/* Contact hero: an actual client-provided editorial photo, not the owner's portrait. */
+.page-top.page-top--contacts{background-image:linear-gradient(90deg,rgba(37,9,21,.91) 0%,rgba(44,9,24,.78) 43%,rgba(48,9,23,.20) 100%),url('backgrounds/editorial-05.webp')!important;background-size:cover!important;background-position:center 48%!important}
+.page-top.page-top--contacts .eyebrow{color:#f4d8d4!important}
+.page-top.page-top--contacts h1{color:#fff3e8!important;text-shadow:0 2px 24px rgba(27,2,13,.2)!important}
+.page-top.page-top--contacts p{color:#fff0e6!important;font-weight:500!important;text-shadow:0 1px 12px rgba(25,4,15,.2)!important}
+/* Preserve photos of the owner on homepage and content pages. */
+.v7-hero::before{background-image:url('portrait-light-original.jpg')!important;background-position:73% 37%!important}
+.v7-feature-photo{background-image:url('portrait-black-original.jpg')!important}
+.v7-accent-photo{background-image:url('portrait-lav-original.jpg')!important}
+.contacts-layout .contacts-artwork{background-image:url('portrait-lav-original.jpg')!important}
+/* Strict corner-to-corner joins of image and story blocks. */
+.v7-feature,.v7-accent,.v16-editorial{display:grid!important;column-gap:0!important;row-gap:0!important;align-items:stretch!important;overflow:hidden!important}
+.v7-feature{grid-template-columns:minmax(0,51fr) minmax(0,49fr)!important}
+.v7-accent{grid-template-columns:minmax(0,48fr) minmax(0,52fr)!important}
+.v16-editorial{grid-template-columns:minmax(0,49fr) minmax(0,51fr)!important}
+.v7-feature-photo,.v7-accent-photo,.v16-editorial-photo,.v7-feature-text,.v7-accent-text,.v16-editorial-story{position:relative!important;inset:auto!important;margin:0!important;min-width:0!important;width:100%!important;max-width:none!important;transform:none!important;box-shadow:none!important;border:0!important}
+.v7-feature-photo,.v7-accent-photo,.v16-editorial-photo{height:100%!important;background-size:cover!important}
+.v16-editorial-photo{background-image:url('backgrounds/editorial-06.webp')!important}
+/* Editorial rhythm, typography and hand-picked supplied photographs. */
+.v16-editorial-story::before{content:'LAV PARFUM / EDITION 01';font:600 10px/1.6 var(--sans);letter-spacing:.20em;color:#95596b;position:absolute;top:24px;left:clamp(30px,7.5vw,116px)}
+.v16-editorial-story h2,.v19-journal h2{font-family:var(--serif);font-weight:400;letter-spacing:-.028em}
+.v19-journal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto auto;align-items:center;gap:clamp(18px,2.7vw,42px);padding:clamp(70px,8.6vw,136px) var(--edge);background:#f3e6dc;overflow:hidden}
+.v19-journal-heading{grid-column:1/span 5;grid-row:1;max-width:500px;align-self:end}
+.v19-journal-heading .eyebrow{color:#8a4b60!important;letter-spacing:.21em}
+.v19-journal-heading h2{font-size:clamp(48px,5.4vw,91px);line-height:.92;color:var(--burgundy);margin:24px 0 28px}
+.v19-journal-heading p{font-size:clamp(13px,1.04vw,16px);max-width:420px;line-height:1.95;color:#76585c}
+.v19-journal-photo{margin:0;position:relative;min-width:0;overflow:hidden}
+.v19-journal-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:none}
+.v19-journal-photo figcaption{font:600 9px/1.6 var(--sans);letter-spacing:.12em;color:#8c6670;margin-top:14px;text-transform:uppercase}
+.v19-journal-photo--main{grid-column:7/span 6;grid-row:1/span 2;align-self:stretch;min-height:590px}
+.v19-journal-photo--main img{height:clamp(490px,49vw,690px);object-position:52% 43%}
+.v19-journal-photo--detail{grid-column:2/span 3;grid-row:2;align-self:start;margin-top:clamp(18px,4vw,65px)}
+.v19-journal-photo--detail img{height:clamp(195px,22vw,320px);object-position:50% 55%}
+.v19-journal-link{grid-column:5/span 2;grid-row:2;align-self:center;display:flex;flex-direction:column;gap:22px;min-width:0}
+.v19-journal-link>span{font:600 9px/1.5 var(--sans);letter-spacing:.19em;color:#98737b}
+.v19-journal-link .elegant-link{font-size:clamp(12px,1.08vw,15px);white-space:normal}
+/* Visual polish is subtle, keeping the site an easy-to-use catalogue. */
+.v3-intro:after{letter-spacing:.22em}
+.v7-hero h1,.page-split-text h2,.v19-journal h2{overflow-wrap:normal;word-break:normal}
+.footer-brand,.site-footer .footer-brand{color:#741d3b!important}
+.site-footer{background:#e9d7d0!important;border-top:1px solid #d2b4ac!important}
+.site-footer .footer-bottom{color:#72505c!important}
+/* Wider payment and delivery content blocks, stable on desktop and mobile. */
+.content-page .content-wrap{max-width:1190px!important}
+.info-columns{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:clamp(18px,3vw,46px)!important}
+.info-card{padding:clamp(28px,4vw,60px)!important}
+@media(max-width:920px){
+ .v19-journal{grid-template-columns:repeat(12,minmax(0,1fr))}
+ .v19-journal-heading{grid-column:1/span 6}
+ .v19-journal-photo--main{grid-column:7/span 6;min-height:490px}
+ .v19-journal-photo--main img{height:500px}
+ .v19-journal-photo--detail{grid-column:1/span 4}
+ .v19-journal-link{grid-column:5/span 2}
+}
+@media(max-width:760px){
+ .page-top.page-top--contacts{background-position:60% 43%!important;background-image:linear-gradient(180deg,rgba(31,7,18,.70),rgba(42,8,22,.57) 57%,rgba(42,8,22,.40)),url('backgrounds/editorial-05.webp')!important}
+ .page-top.page-top--about{background-position:54% 44%!important}
+ .v7-feature,.v7-accent,.v16-editorial{grid-template-columns:1fr!important}
+ .v7-feature-photo,.v7-accent-photo,.v16-editorial-photo{width:100%!important;min-height:335px!important;height:clamp(335px,90vw,460px)!important}
+ .v16-editorial-story::before{top:18px;left:24px}
+ .v19-journal{grid-template-columns:repeat(6,minmax(0,1fr));gap:22px;padding:70px var(--edge)}
+ .v19-journal-heading{grid-column:1/span 6;grid-row:1}
+ .v19-journal-heading h2{font-size:clamp(49px,11vw,70px);max-width:570px}
+ .v19-journal-photo--main{grid-column:2/span 5;grid-row:2;min-height:0}
+ .v19-journal-photo--main img{height:clamp(400px,120vw,560px)}
+ .v19-journal-photo--detail{grid-column:1/span 3;grid-row:3;margin:0}
+ .v19-journal-photo--detail img{height:clamp(190px,53vw,300px)}
+ .v19-journal-link{grid-column:4/span 3;grid-row:3;padding-left:6px;gap:15px}
+ .info-columns{grid-template-columns:1fr!important}
+ .info-card{padding:27px!important}
+ .page-top.page-top--about h1,.page-top.page-top--contacts h1{font-size:clamp(46px,11.3vw,74px)!important}
+ .page-top.page-top--about p,.page-top.page-top--contacts p{font-size:13px!important}
+}
+@media(max-width:390px){
+ .v19-journal-photo--detail{grid-column:1/span 4}
+ .v19-journal-link{grid-column:5/span 2}
+ .v19-journal-link .elegant-link{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.reveal,.home-scent,.product-card{animation:none!important;transition:none!important}}
