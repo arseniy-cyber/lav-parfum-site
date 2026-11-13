@@ -1,0 +1,90 @@
+/* LAV PARFUM v7 - supplied editorial photography / white-only product tiles. */
+:root { --v7-warm: #ebe0d1; --v7-wine: #4b0b20; }
+html,body{overflow-x:clip;max-width:100%;}
+main,section,.page-split,.page-split-text,.form-shell,.form-panel,.form-intro{min-width:0;}
+.v7-hero{min-height:clamp(560px,80vh,910px);background:#3d1321 url('backgrounds/rose-marble.webp') center 52%/cover no-repeat;display:flex;align-items:center;position:relative;isolation:isolate;}
+.v7-hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,6,17,.81) 0%,rgba(38,6,19,.52) 38%,rgba(25,10,15,.03) 80%);z-index:-1}
+.v7-hero-inner{color:#fff6e8;width:min(760px,100%);padding:clamp(110px,10vw,180px) var(--edge) 105px;position:relative;}
+.v7-hero .hero-kicker{font-size:11px;letter-spacing:.18em;color:#f6e8df;}
+.v7-hero h1{font-size:clamp(70px,8.1vw,135px);font-family:var(--serif);font-weight:400;line-height:.83;letter-spacing:-.04em;color:#fff6e8;margin:35px 0 35px;}
+.v7-hero h1 em{font-weight:400;}
+.v7-hero-inner>p{font:400 clamp(14px,1.4vw,18px)/1.85 var(--sans);max-width:450px;color:#f0ddd4;}
+.v7-light-link{display:inline-flex;align-items:center;gap:40px;margin-top:26px;border:1px solid rgba(255,248,239,.7);border-radius:80px;color:#fff4e9;padding:14px 24px;font-size:12px;transition:background .35s,color .35s,transform .35s;}
+.v7-light-link:hover{background:#fff4e9;color:#571222;transform:translateY(-3px)}
+.v7-feature{display:grid;grid-template-columns:51% 49%;background:#e9ddcb;align-items:stretch;min-height:590px;}
+.v7-feature-photo{background:url('backgrounds/marble-arch.webp') center center/cover no-repeat;min-height:500px;}
+.v7-feature-text{padding:clamp(65px,9vw,145px) clamp(30px,6vw,100px);display:flex;justify-content:center;align-items:flex-start;flex-direction:column;}
+.v7-feature h2,.v7-accent h2{font:400 clamp(55px,6vw,95px)/.90 var(--serif);color:#4b0b20;margin:25px 0;}
+.v7-feature p,.v7-accent p{font:400 clamp(14px,1.16vw,17px)/1.9 var(--sans);color:#705450;max-width:440px;margin:0 0 22px;}
+.v7-warm-pause,.v6-warm-pause{background:linear-gradient(108deg,#e5d6c0,#eaddca 65%,#e8dac4)!important;}
+.v7-accent{display:grid;grid-template-columns:48% 52%;background:#efe5d8;min-height:580px;align-items:stretch;}
+.v7-accent-text{padding:clamp(70px,9vw,140px) clamp(30px,7vw,120px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;}
+.v7-accent-photo{min-height:500px;background:url('backgrounds/peonies-berries.webp') center center/cover no-repeat;}
+.v3-new{background:#f8f3ea;}
+/* Stable catalogue / homepage tiles: no unexpected span geometry */
+.product-grid,.catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 20px;align-items:start;}
+.product-card{min-width:0;overflow:visible;display:flex;flex-direction:column;height:100%;}
+.product-visual{width:100%;aspect-ratio:1/1;min-height:0!important;height:auto!important;background:#fff!important;overflow:hidden;}
+.product-visual .real-product-img{width:100%!important;height:100%!important;padding:7% !important;object-fit:contain!important;filter:none!important;}
+.product-meta{width:100%;min-width:0;display:flex;flex-direction:column;align-items:flex-start;}
+.product-meta h3{overflow-wrap:anywhere;hyphens:auto;line-height:1.1!important;min-height:2.15em;}
+.product-meta .price{margin-top:auto;padding-top:7px;}
+.v7-new-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(16px,2.2vw,34px)!important;grid-auto-rows:auto!important;align-items:stretch!important;}
+.v7-new-grid .home-scent,.v7-new-grid .home-scent:nth-child(n){display:flex!important;flex-direction:column!important;grid-column:auto!important;grid-row:auto!important;gap:0!important;background:transparent!important;min-height:0!important;}
+.v7-new-grid .home-scent-picture,.v7-new-grid .home-scent:nth-child(n) .home-scent-picture{aspect-ratio:1/1!important;height:auto!important;flex:none!important;width:100%!important;}
+.v7-new-grid .home-scent-info,.v7-new-grid .home-scent:nth-child(n) .home-scent-info{padding:18px 0 5px!important;flex-direction:column!important;gap:6px!important;align-items:flex-start!important;min-height:135px;}
+.v7-new-grid .home-scent-info h3{font-size:clamp(24px,2vw,34px)!important;}
+.v7-new-grid .home-scent-info>b{margin-top:auto!important;}
+.home-scent-picture .home-real-photo{padding:5%!important;object-fit:contain!important;}
+.product-visual,.home-scent-picture,.detail-gallery{background:#fff!important;border:0!important;}
+.product-visual img,.home-scent-picture img,.detail-gallery img{filter:none!important;box-shadow:none!important;mix-blend-mode:normal!important;}
+/* Compact menu remains scrollable if browser window is short */
+.menu-layer{max-height:calc(100dvh - 86px)!important;overflow:auto!important;overscroll-behavior:contain;}
+/* Quiz: useful image and text on the formerly blank left area */
+.quiz-panel{grid-template-columns:minmax(235px,.87fr) minmax(0,1.13fr)!important;gap:clamp(24px,4vw,68px)!important;max-width:1260px;margin:0 auto;align-items:start;}
+.quiz-panel .form-intro{position:sticky;top:112px;align-self:start;min-width:0;}
+.quiz-panel .form-intro p{font-size:clamp(13px,1.1vw,15px);line-height:1.8;}
+.v7-quiz-art{position:relative;min-height:390px;aspect-ratio:4/4.4;background:#401222 url('backgrounds/lilies-crystal.webp') center center/cover no-repeat;margin-top:35px;overflow:hidden;display:flex;align-items:flex-end;padding:24px;isolation:isolate;}
+.v7-quiz-art:before{content:'';position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(34,8,18,.7));z-index:-1;}
+.v7-quiz-art span{color:#fff7eb;font:400 clamp(25px,2.5vw,39px)/1.04 var(--serif);text-shadow:0 2px 13px rgba(0,0,0,.2);}
+.v7-quiz-art em{font-style:italic;}
+.v7-quiz-caption{margin-top:14px!important;font:500 11px var(--sans)!important;letter-spacing:.1em;text-transform:uppercase;color:#7d5e57!important;}
+.v7-consent{display:flex;align-items:flex-start;gap:12px;font:400 12px/1.7 var(--sans);color:#6c4a43;cursor:pointer;}
+.v7-consent input{flex:0 0 auto;accent-color:#541424;width:17px;height:17px;margin-top:2px;}
+.v7-consent a,.v7-policy a{color:#5b1827;text-decoration:underline;text-underline-offset:3px;}
+.v7-legal-disclosure,.v7-seller-line{font:500 11px/1.8 var(--sans);color:#82675f;border-top:1px solid #ddcabd;margin-top:38px;padding-top:24px;}
+.v7-policy .content-wrap{max-width:880px;}
+.v7-policy h2{font-size:clamp(32px,3.8vw,48px);line-height:1.1;margin-top:45px;}
+.v7-policy p{font-size:14px;line-height:1.9;}
+.v7-policy-note{font-style:italic;}
+.site-footer .footer-bottom{display:flex;flex-wrap:wrap;align-items:center;gap:10px 25px;}
+.site-footer .footer-bottom a{font:500 10px var(--sans);color:inherit;text-decoration:underline;}
+@media(max-width:1100px){.product-grid,.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:900px){
+ .v7-hero{min-height:620px;background-position:52% center;}
+ .v7-hero-inner{padding:120px 7vw 90px;}
+ .v7-feature,.v7-accent{grid-template-columns:1fr;}
+ .v7-feature-photo,.v7-accent-photo{min-height:450px;}
+ .v7-feature-text,.v7-accent-text{padding:78px 7vw;}
+ .quiz-panel{grid-template-columns:1fr!important;}
+ .quiz-panel .form-intro{position:relative;top:auto;}
+ .v7-quiz-art{min-height:0;height:340px;aspect-ratio:auto;max-width:550px;}
+}
+@media(max-width:620px){
+ .v7-hero{min-height:600px;background-position:54% center;}
+ .v7-hero-inner{padding:138px 22px 80px;}
+ .v7-hero h1{font-size:clamp(62px,13vw,82px);}
+ .v7-hero-inner>p{max-width:325px;}
+ .v7-feature-photo,.v7-accent-photo{min-height:300px;height:330px;}
+ .v7-feature-text,.v7-accent-text{padding:62px 22px;}
+ .v7-feature h2,.v7-accent h2{font-size:clamp(56px,13vw,75px)}
+ .product-grid,.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px;}
+ .product-meta h3{font-size:clamp(21px,6.2vw,29px);min-height:2.3em;}
+ .v7-new-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:18px 12px!important;}
+ .v7-new-grid .home-scent-info,.v7-new-grid .home-scent:nth-child(n) .home-scent-info{min-height:144px;}
+ .v7-new-grid .home-scent-info h3{font-size:24px!important;}
+ .v7-new-grid .home-scent:last-child:nth-child(odd){grid-column:1 / -1!important;width: min(100%,300px);justify-self:center;}
+ .quiz-panel{padding:24px!important;}
+ .v7-quiz-art{height:290px;}
+}
+@media(prefers-reduced-motion:reduce){.v7-light-link{transition:none;}}
